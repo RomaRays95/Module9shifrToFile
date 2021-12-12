@@ -21,17 +21,12 @@ public class Main {
             String text = "Зашифровано в " + dateFormat.format(calendar.getTime()) + scanText("code.txt");
             StringBuilder code = new StringBuilder();
             for (int i = 0; i < text.length(); i++) {
-                if (text.charAt(i) == '\n'){
-                    code.append("");
-                }
-                else code.append(coding(text.substring(i, i + 1), key));
+                if (text.charAt(i) != '\n') code.append(coding(text.substring(i, i + 1), key));
             }
             String result = code.toString();
             FileOutputStream fos = new FileOutputStream("ResultOfCoding.txt");
             fos.write(result.getBytes(StandardCharsets.UTF_8));
             fos.close();
-            System.out.println("Результат:");
-            System.out.println(code);
         }
         if (fileToDecode.exists()){
             String text = scanText("decode.txt");
@@ -43,8 +38,6 @@ public class Main {
             FileOutputStream fos = new FileOutputStream("ResultOfDecoding.txt");
             fos.write(result.getBytes(StandardCharsets.UTF_8));
             fos.close();
-            System.out.println("Результат:");
-            System.out.println(code);
         }
 
     }
