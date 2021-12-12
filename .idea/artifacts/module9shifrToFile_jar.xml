@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="module9shifrToFile:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/module9shifrToFile_jar</output-path>
+    <root id="archive" name="module9shifrToFile.jar">
+      <element id="module-output" name="module9shifrToFile" />
+    </root>
+  </artifact>
+</component>

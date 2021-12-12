@@ -17,7 +17,7 @@ public class Main {
         File fileToDecode = new File("decode.txt");
         if (fileToCode.exists()) {
             Calendar calendar = Calendar.getInstance();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("HH-mm, dd.MM - ");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm, dd.MM*");
             String text = "Зашифровано в " + dateFormat.format(calendar.getTime()) + scanText("code.txt");
             StringBuilder code = new StringBuilder();
             for (int i = 0; i < text.length(); i++) {
